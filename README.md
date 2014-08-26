@@ -3,15 +3,14 @@ nibse-php
 
 Register for your Access Token at https://www.wmcex.com/gettoken
 
+#Simple Usage
 
-<h1>Simple Usage</h1>
+include_once 'nibse.php';<br>
+$nibse = new nibse(YOUR_ACCESS_TOKEN);<br>
 
-include_once 'nibse.php';
-$nibse = new nibse(YOUR_ACCESS_TOKEN);
-
-#optional $WALLET_LABEL is a public name for this wallet
-if ($nibse->CreateWallet([$WALLET_LABEL]))
-{
-  $wallet_address = $nibse->walletAddress;
-  $wallet_key = $nibse->walletKey;
+<!--optional $WALLET_LABEL is a public name for this wallet-->
+if ($nibse->CreateWallet([$WALLET_LABEL]))<br>
+{<br>
+  $wallet_address = $nibse->walletAddress;<br>
+  $wallet_key = $nibse->walletKey;<br>
 }
